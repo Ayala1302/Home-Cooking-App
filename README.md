@@ -92,3 +92,5 @@ user_id INTEGER FOREIGN KEY,
 ALTER TABLE recipes ADD FOREIGN KEY (user_id) REFERENCES users(id);
 ALTER TABLE recipes ADD FOREIGN KEY (category) REFERENCES categories(id);
 ALTER TABLE categories ADD FOREIGN KEY (user_id) REFERENCES users(id);
+
+![Home Cooking ERD](https://user-images.githubusercontent.com/110849309/219255791-3ee3668a-83ae-424a-a827-cc83fd990ae4.png)
