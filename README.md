@@ -10,27 +10,27 @@ For my Project I think I would need data such as:
 
 users
 columns:
-    id (pk)
-    first_name
-    last_name
-    email
-    password
+id (pk)
+first_name
+last_name
+email
+password
 
 recipes
 columns:
-    id (pk)
-    name
-    ingredients
-    instructions
-    category
-    user_id (fk)
+id (pk)
+name
+ingredients
+instructions
+category
+user_id (fk)
 
 categories
 columns:
-    id (pk)
-    recipe_id (fk)
-    name
-    user_id (fk)
+id (pk)
+recipe_id (fk)
+name
+user_id (fk)
 
 <!-- Define relationships between those tables -->
 
@@ -63,26 +63,26 @@ has_many :recipes
 # SQL Commands
 
 CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  first_name VARCHAR(255),
-  last_name VARCHAR(255),
-  email VARCHAR(255),
-  password VARCHAR(255)
+id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(255),
+last_name VARCHAR(255),
+email VARCHAR(255),
+password VARCHAR(255)
 );
 
 CREATE TABLE recipes (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  ingredients VARCHAR(255),
-  instructions VARCHAR(255),
-  category INTEGER FOREIGN KEY,
-  user_id INTEGER FOREIGN KEY
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255),
+ingredients VARCHAR(255),
+instructions VARCHAR(255),
+category INTEGER FOREIGN KEY,
+user_id INTEGER FOREIGN KEY
 );
 
 CREATE TABLE categories (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  user_id INTEGER FOREIGN KEY,
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255),
+user_id INTEGER FOREIGN KEY,
 );
 
 <!-- Write the SQL Commands that would create the relationships between the tables -->
